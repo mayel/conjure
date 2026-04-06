@@ -3,16 +3,16 @@
 You describe a function. An LLM hallucinates it. The BEAM compiles and runs it live in your runtime with no restart, no compile step, no test suite, no PR reviews, no deploy. The source also lands in your codebase for further use. Straight from user input into production. Probably fine?
 
 ```elixir
-iex> Conjure.run("sum these integers", args: [1, 2, 3])
-6
+iex> Conjure.run("roman numeral for n", args: [2026])
+"MMXXVI"
 
-# Zig runs faster than elixir for some things:
+# Zig is faster than elixir for some things:
 iex> Conjure.run("sum integers from 1 to n", args: [1_000_000_000], lang: :zig)
 500000000500000000
 
-# or why not use C while we're here:
-iex> Conjure.run("dot product of two float lists", args: [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]], lang: :c)
-32.0
+# or why not use C to calculate the distance between London and Paris:
+iex> Conjure.run("distance in km between two gps coordinates", args: [51.5074, -0.1278, 48.8566, 2.3522], lang: :c)
+343.5560603410416
 ```
 
 ## Why?
