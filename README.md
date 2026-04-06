@@ -1,6 +1,6 @@
 # Conjure
 
-You describe a function. An LLM hallucinates it. The BEAM compiles and runs it live in your runtime with no restart, no compile step, PR reviews, no deploy. The source also lands in your codebase for further use. Straight from user input into production. Probably fine?
+You describe a function. An LLM hallucinates it. The BEAM compiles and runs it live in your runtime with no restart, no compile step, no test suite, no PR reviews, no deploy. The source also lands in your codebase for further use. Straight from user input into production. Probably fine?
 
 ```elixir
 iex> Conjure.run("sum these integers", args: [1, 2, 3])
